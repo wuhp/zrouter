@@ -243,6 +243,11 @@ func (p *Proxy) PutServicePoolNode(sname, pname string, n *Node) error {
 
     node.Weight = n.Weight
     node.Status = n.Status
+
+    if node.Status == "unloading" && node.ConnNum == 0 {
+        node.Status = "off"
+    }
+
     return nil
 }
 

@@ -3,10 +3,10 @@
 A light weight http proxy, written in go.
 
 ## Situations
-    reverse proxy
+    reverse proxy(multi service router)
     load balance
-    gray test
-    hot deployment(upgrad without down time)
+    production/gray/debug(multi area router)
+    hot deployment(upgrade with zero downtime)
 
 ## Build & Start
     go install zrouter
