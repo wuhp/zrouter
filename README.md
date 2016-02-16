@@ -2,11 +2,11 @@
 
 A light weight http proxy, written in go.
 
-## Situations
-    reverse proxy(multi service router)
-    load balance
-    production/gray/debug(multi area router)
-    hot deployment(upgrade with zero downtime)
+## Main Features
+    Reverse Proxy  - route requests to different services
+    Load Balance
+    Multi Runtime  - route request to production/gray/debug zone
+    Hot Deployment - upgrade app with zero downtime
 
 ## Build & Start
     go install zrouter
@@ -18,7 +18,7 @@ Start worker instances
     go run example/worker.go 20001   ## Terminal 1
     go run example/worker.go 20002   ## Terminal 2
 
-Setup rules
+Setup routing rules
 
     curl -i -X POST http://localhost:10002/api/services -d '{"name":"sleep_server"}'
     curl -i -X POST http://localhost:10002/api/services/sleep_server/pools/prod/nodes -d '{"name":"prod_001", "host":"127.0.0.1:20001", "status":"on"}'
