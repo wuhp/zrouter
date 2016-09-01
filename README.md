@@ -1,11 +1,11 @@
 # zrouter
 
-A light weight http proxy, written in go.
+A light weight http proxy, with hot service deploy mechanism.
 
 ## Main Features
-    Reverse Proxy  - route requests to different services
+    Reverse Proxy
     Load Balance
-    Multi Runtime  - route request to production/gray/debug zone
+    Multi Runtime  - production/gray/debug zone
     Hot Deployment - upgrade app with zero downtime
 
 ## Build & Start
